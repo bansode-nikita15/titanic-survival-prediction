@@ -1,0 +1,135 @@
+{
+  "info": {
+    "train_shape": [
+      891,
+      12
+    ],
+    "kaggle_test_shape": [
+      418,
+      11
+    ],
+    "survival_rate": 38.38,
+    "missing": {
+      "age": 177,
+      "cabin": 687,
+      "embarked": 2
+    }
+  },
+  "groups": {
+    "by_sex": {
+      "female": 74.2,
+      "male": 18.9
+    },
+    "by_class": {
+      "1": 63.0,
+      "2": 47.3,
+      "3": 24.2
+    },
+    "by_embarked": {
+      "C": 55.4,
+      "Q": 39.0,
+      "S": 33.7
+    }
+  },
+  "tuned_random_forest": {
+    "best_params": {
+      "max_depth": 4,
+      "min_samples_leaf": 1,
+      "n_estimators": 200
+    },
+    "cv_accuracy": 0.8258741258741258,
+    "validation_accuracy": 0.8100558659217877,
+    "precision": 0.8070175438596491,
+    "recall": 0.6666666666666666,
+    "f1": 0.7301587301587301,
+    "roc_auc": 0.8391304347826087
+  },
+  "confusion_matrix": [
+    [
+      99,
+      11
+    ],
+    [
+      23,
+      46
+    ]
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n        Died       0.81      0.90      0.85       110\n    Survived       0.81      0.67      0.73        69\n\n    accuracy                           0.81       179\n   macro avg       0.81      0.78      0.79       179\nweighted avg       0.81      0.81      0.81       179\n",
+  "top_importance": {
+    "sex_female": 0.2956,
+    "sex_male": 0.2632,
+    "fare": 0.1041,
+    "pclass": 0.088,
+    "has_cabin": 0.068,
+    "age": 0.0649,
+    "family_size": 0.0454,
+    "sibsp": 0.0186,
+    "parch": 0.017,
+    "embarked_S": 0.0117
+  },
+  "train_split_size": 712,
+  "validation_split_size": 179,
+  "kaggle_test_size": 418,
+  "model_comparison": [
+    {
+      "Model": "SVM (RBF)",
+      "CV Acc (mean)": 0.821638924455826,
+      "CV Acc (std)": 0.021021436469282454,
+      "Test Acc": 0.8268156424581006,
+      "Precision": 0.8166666666666667,
+      "Recall": 0.7101449275362319,
+      "F1": 0.7596899224806202,
+      "ROC-AUC": 0.8329380764163373
+    },
+    {
+      "Model": "Logistic Regression",
+      "CV Acc (mean)": 0.8005811090318133,
+      "CV Acc (std)": 0.021438176094297465,
+      "Test Acc": 0.8100558659217877,
+      "Precision": 0.7692307692307693,
+      "Recall": 0.7246376811594203,
+      "F1": 0.746268656716418,
+      "ROC-AUC": 0.8455862977602108
+    },
+    {
+      "Model": "Gradient Boosting",
+      "CV Acc (mean)": 0.8244164286417808,
+      "CV Acc (std)": 0.02276710403518699,
+      "Test Acc": 0.8044692737430168,
+      "Precision": 0.8035714285714286,
+      "Recall": 0.6521739130434783,
+      "F1": 0.72,
+      "ROC-AUC": 0.8116600790513834
+    },
+    {
+      "Model": "Random Forest",
+      "CV Acc (mean)": 0.8061952132374668,
+      "CV Acc (std)": 0.014209295256358747,
+      "Test Acc": 0.7988826815642458,
+      "Precision": 0.7538461538461538,
+      "Recall": 0.7101449275362319,
+      "F1": 0.7313432835820896,
+      "ROC-AUC": 0.8337285902503293
+    },
+    {
+      "Model": "K-Nearest Neighbors",
+      "CV Acc (mean)": 0.7907416527134836,
+      "CV Acc (std)": 0.019966911148828627,
+      "Test Acc": 0.776536312849162,
+      "Precision": 0.7230769230769231,
+      "Recall": 0.6811594202898551,
+      "F1": 0.7014925373134329,
+      "ROC-AUC": 0.8330039525691699
+    },
+    {
+      "Model": "Decision Tree",
+      "CV Acc (mean)": 0.8005909583374372,
+      "CV Acc (std)": 0.018806717157016466,
+      "Test Acc": 0.7541899441340782,
+      "Precision": 0.6923076923076923,
+      "Recall": 0.6521739130434783,
+      "F1": 0.6716417910447762,
+      "ROC-AUC": 0.8061923583662715
+    }
+  ]
+}
